@@ -20,6 +20,15 @@
               v-model="query"
             ></b-form-input>
             <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+            <b-nav-item-dropdown text="Search by Click" right v-if="wordList">
+              <b-dropdown-item
+                v-for="(word, index) in wordList"
+                :key="index"
+                :to="`/search/${word}`"
+              >
+                {{ word }}
+              </b-dropdown-item>
+            </b-nav-item-dropdown>
           </b-nav-form>
         </b-navbar-nav>
       </b-collapse>
@@ -31,6 +40,9 @@
 import { mapActions } from 'vuex';
 
 export default {
+  props: {
+    wordList: Array,
+  },
   data() {
     return {
       query: null,
@@ -41,7 +53,6 @@ export default {
     handleSubmit() {
       if (this.query !== null && this.query !== '') {
         this.resetLoading();
-        // this.searchFlickr(this.query);
         this.$router.push(`/search/${this.query}`).catch(() => {});
       }
       this.query = null;

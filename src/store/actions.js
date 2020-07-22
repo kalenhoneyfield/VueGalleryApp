@@ -14,10 +14,15 @@ export default {
         payload = {
           images: response.data.photos.photo,
           searchQuery: query,
-          loading: false,
+          loading: true,
         };
         console.log(payload);
         context.commit('updateImages', payload);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          context.commit('setLoadingState', false);
+        }, 800);
       });
   },
   resetLoading: context => {

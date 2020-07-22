@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar :wordList="randomWordList" />
     <router-view />
   </div>
 </template>
 
 <script>
+import _ from 'lodash';
 import NavBar from './components/NavBar.vue';
+import wordsList from './assets/wordlist/wordList';
 
 export default {
   components: {
     NavBar,
+  },
+  data() {
+    return {
+      words: null,
+    };
+  },
+  computed: {
+    randomWordList() {
+      return _.sampleSize(wordsList, 3);
+    },
   },
 };
 </script>

@@ -8,4 +8,7 @@ export default {
     state.loading = loading;
     state.images = [];
   },
+  setLoadingState: (state, loading) => {
+    state.loading = loading;
+  },
 };
