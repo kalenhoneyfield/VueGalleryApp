@@ -6,5 +6,6 @@ export default {
   },
   resetLoadingState: (state, loading) => {
     state.loading = loading;
+    state.images = [];
   },
 };

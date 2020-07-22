@@ -41,7 +41,7 @@ export default {
     handleSubmit() {
       this.resetLoading();
       // this.searchFlickr(this.query);
-      this.$router.push(`/search/${this.query}`);
+      this.$router.push(`/search/${this.query}`).catch(() => {});
       this.query = null;
     },
   },
