@@ -4,7 +4,7 @@ export default {
   searchFlickr: (context, query) => {
     const APIKEY = context.state.apiKey;
     const pageNum = 1;
-    const perPage = 6;
+    const perPage = 24;
     let payload = {};
     axios
       .get(
