@@ -1,15 +1,17 @@
 <template>
   <b-container fluid>
     <div>
-      <b-img
-        v-for="(image, index) in images"
-        :src="`https://live.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`"
-        thumbnail
-        :alt="image.title"
-        v-bind="mainProps"
-        :key="index"
-        @click="handleModal(image)"
-      ></b-img>
+      <div>
+        <b-img
+          v-for="(image, index) in images"
+          :src="`https://live.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`"
+          thumbnail
+          :alt="image.title"
+          v-bind="mainProps"
+          :key="index"
+          @click="handleModal(image)"
+        ></b-img>
+      </div>
     </div>
 
     <b-modal hide-footer size="lg" v-model="modalShow">
@@ -18,6 +20,7 @@
         <b-img
           :src="`https://live.staticflickr.com/${foto.server}/${foto.id}_${foto.secret}_c.jpg`"
           thumbnail
+          rounded
           fluid
           :alt="foto.title"
         ></b-img>

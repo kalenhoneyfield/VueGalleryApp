@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     randomWordList() {
-      return _.sampleSize(wordsList, 3);
+      return [..._.sampleSize(wordsList, 3), 'palouse'];
     },
   },
 };

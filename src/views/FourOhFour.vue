@@ -6,3 +6,9 @@
     </svg>
   </div>
 </template>
+
+<style scoped>
+svg {
+  fill: var(--warning);
+}
+</style>
