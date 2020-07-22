@@ -16,7 +16,7 @@
       <template v-slot:modal-title> {{ foto.title }} </template>
       <div class="d-block text-center">
         <b-img
-          :src="`https://live.staticflickr.com/${foto.server}/${foto.id}_${foto.secret}.jpg`"
+          :src="`https://live.staticflickr.com/${foto.server}/${foto.id}_${foto.secret}_c.jpg`"
           thumbnail
           fluid
           :alt="foto.title"
