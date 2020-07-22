@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Search from '../views/Search.vue';
+import FourOhFour from '../views/FourOhFour.vue';
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: '/search/:query',
     name: 'Search',
     component: Search,
+  },
+  {
+    path: '*',
+    name: 'FourOhFour',
+    component: FourOhFour,
   },
 ];
 
