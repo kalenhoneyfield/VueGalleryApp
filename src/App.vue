@@ -7,16 +7,10 @@
 
 <script>
 import NavBar from './components/NavBar.vue';
-import keyAPI from './config';
 
 export default {
   components: {
     NavBar,
-  },
-  data() {
-    return {
-      apiKey: keyAPI,
-    };
   },
 };
 </script>

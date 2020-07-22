@@ -37,9 +37,12 @@ export default {
     };
   },
   methods: {
-    ...mapActions(['searchFlickr']),
+    ...mapActions(['searchFlickr', 'resetLoading']),
     handleSubmit() {
-      console.log(this.query);
+      this.resetLoading();
+      // this.searchFlickr(this.query);
+      this.$router.push(`/search/${this.query}`);
+      this.query = null;
     },
   },
 };

@@ -1,5 +1,10 @@
 export default {
-  updateImages: (state, query) => {
-    state.images.push(query);
+  updateImages: (state, payloadQuery) => {
+    state.loading = payloadQuery.loading;
+    state.images = payloadQuery.images;
+    state.searchQuery = payloadQuery.searchQuery;
+  },
+  resetLoadingState: (state, loading) => {
+    state.loading = loading;
   },
 };
