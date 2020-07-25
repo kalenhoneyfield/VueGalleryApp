@@ -4,7 +4,7 @@
       <template v-slot:header>Vue Flickr</template>
 
       <template v-slot:lead>
-        This app is a simply search tool for finding the top 24 "interesting" pictures on Flickr for a given search
+        This app is a simple search tool for finding the top 24 "interesting" pictures on Flickr for a given search
         term.
       </template>
 
